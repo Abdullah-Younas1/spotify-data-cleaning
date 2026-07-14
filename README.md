@@ -21,7 +21,7 @@ This chart calculates the average popularity score across all tracks for each ar
 
 ![Top Artists](images/top_artists.png)
 
-### 2. Feature Correlation Heatmap
+## 2. Feature Correlation Heatmap
 A correlation matrix mapping the interactions between key musical features. This helps us see how attributes like `energy` and `loudness` scale together.
 
 ![Feature Correlation Matrix](images/feature_correlation.png)
@@ -29,13 +29,25 @@ A correlation matrix mapping the interactions between key musical features. This
 
 ## 🛠️ How to Run the Pipeline
 
-### Prerequisites
+## Prerequisites
 Ensure you have Python and your packages set up. This pipeline relies on:
 * `pandas`
 * `matplotlib`
 * `seaborn`
 
-### Execution
+## Execution
 Run the data cleaning script first:
 ```bash
 python clean.py
+
+
+## 🎵 Bonus: Interactive Recommendation Engine (`recommend.py`)
+
+This project also includes an interactive, content-based recommendation engine built using `scikit-learn`. 
+
+By normalizing features (such as `tempo`, `danceability`, and `energy`) using a `MinMaxScaler` and calculating the **Cosine Similarity** between tracks, the engine matches your favorite songs with the top 5 most acoustically similar songs in the dataset.
+
+## How to use:
+Run the script:
+```bash
+python recommend.py
